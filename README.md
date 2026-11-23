@@ -1,4 +1,4 @@
-# Harfouz · حرفوز
+# Harfooz · حرفوز
 
 **An open-source playground for parametric Arabic typography.**
 **Try it: [harfouz.github.io/harfouz](https://harfouz.github.io/harfouz/)**. It runs in the browser, nothing to install.
