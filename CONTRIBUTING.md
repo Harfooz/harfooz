@@ -1,4 +1,4 @@
-# Contributing to Harfouz
+# Contributing to Harfooz
 
 Thank you for helping. Harfouz is for designers, animators and developers alike: you don't need to be a programmer to contribute. A bug report, a typeface suggestion or a motion preset idea is as welcome as code.
 
