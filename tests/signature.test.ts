@@ -25,12 +25,12 @@ function pngChunks(png: Uint8Array) {
   return chunks;
 }
 
-describe('invisible "Made with Harfouz" credit', () => {
+describe('invisible "Made with Harfooz" credit', () => {
   it('PNG: text chunks right after the header, file structure intact', () => {
     const signed = signPng(PNG);
     const chunks = pngChunks(signed);
     expect(chunks[0].type).toBe('IHDR');
-    expect(chunks[1]).toEqual({ type: 'tEXt', data: 'Software\0Harfouz' });
+    expect(chunks[1]).toEqual({ type: 'tEXt', data: 'Software\0Harfooz' });
     expect(chunks[2].data).toBe(`Comment\0${SIGNATURE}`);
     expect(chunks.at(-1)!.type).toBe('IEND');
     // The original chunks are all still there.
@@ -74,8 +74,8 @@ describe('invisible "Made with Harfouz" credit', () => {
     expect(signed.getUint32(8, true)).toBe(signed.byteLength);
     const asset = JSON.parse(new TextDecoder().decode(new Uint8Array(signed.buffer, 20, jsonLength))).asset;
     expect(asset.version).toBe('2.0');
-    expect(asset.generator).toBe('Harfouz (THREE.GLTFExporter)');
-    expect(asset.extras.madeWith).toBe('Harfouz');
+    expect(asset.generator).toBe('Harfooz (THREE.GLTFExporter)');
+    expect(asset.extras.madeWith).toBe('Harfooz');
     // The binary chunk follows, unchanged.
     expect([...new Uint8Array(signed.buffer, 20 + jsonLength + 8, 4)]).toEqual([1, 2, 3, 4]);
   });

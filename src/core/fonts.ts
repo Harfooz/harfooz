@@ -2,7 +2,7 @@ import * as hb from 'harfbuzzjs';
 import { parse as parseOpenType, type Font as OpenTypeFont } from 'opentype.js';
 import type { PathCommand } from './types';
 
-/** Fonts bundled with Harfouz. Files live in /public/fonts (SIL OFL 1.1, see CREDITS.md). */
+/** Fonts bundled with Harfooz. Files live in /public/fonts (SIL OFL 1.1, see CREDITS.md). */
 export const FONT_CATALOG = [
   // Naskh: the everyday book hand.
   { id: 'amiri', name: 'Amiri', style: 'Naskh', url: 'fonts/amiri/Amiri-Regular.ttf' },
@@ -24,7 +24,7 @@ export const FONT_CATALOG = [
 ] as const;
 
 /** CSS font-family under which a bundled font is registered in the page. */
-export const cssFamily = (id: string) => `Harfouz ${id}`;
+export const cssFamily = (id: string) => `Harfooz ${id}`;
 
 export type FontId = (typeof FONT_CATALOG)[number]['id'];
 
@@ -80,7 +80,7 @@ export function loadFont(id: FontId): Promise<LoadedFont> {
       })
       .then((bytes) => {
         // Also make the font available to the page (the optional
-        // "Made with Harfouz" mark on exports is drawn with it).
+        // "Made with Harfooz" mark on exports is drawn with it).
         if (typeof FontFace !== 'undefined') {
           const face = new FontFace(cssFamily(entry.id), bytes.slice(0));
           document.fonts.add(face);

@@ -124,7 +124,7 @@ export class MaterialLibrary {
           );
       };
       // All layers share one compiled shader; only the uniforms differ.
-      m.customProgramCacheKey = () => 'harfouz-fur';
+      m.customProgramCacheKey = () => 'harfooz-fur';
       material = m;
       this.cache.set(key, material);
     }
@@ -240,7 +240,7 @@ function glass(base: { color: Color; vertexColors: boolean }): MeshPhysicalMater
         gl_FragColor = vec4(crystal / crystalAlpha, crystalAlpha * opacity);`,
       );
   };
-  m.customProgramCacheKey = () => 'harfouz-crystal';
+  m.customProgramCacheKey = () => 'harfooz-crystal';
   return m;
 }
 

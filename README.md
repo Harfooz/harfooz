@@ -1,10 +1,10 @@
 # Harfooz · حرفوز
 
 **An open-source playground for parametric Arabic typography.**
-**Try it: [harfouz.github.io/harfouz](https://harfouz.github.io/harfouz/)**. It runs in the browser, nothing to install.
+**Try it: [harfooz.github.io/harfooz](https://harfooz.github.io/harfooz/)**. It runs in the browser, nothing to install.
 Type a word or a sentence in Arabic, then shape it, colour it, put it in 3D and animate it, with sliders. Export the result as an image, a vector file, a 3D model or a video.
 
-Harfouz is made for designers, animators and type lovers. Its one rule: **the Arabic must stay correct.** Letters take their proper joined forms, ligatures and diacritics are placed by a real shaping engine, and every deformation is applied *after* shaping, so connected letters stay connected.
+Harfooz is made for designers, animators and type lovers. Its one rule: **the Arabic must stay correct.** Letters take their proper joined forms, ligatures and diacritics are placed by a real shaping engine, and every deformation is applied *after* shaping, so connected letters stay connected.
 
 ---
 
@@ -45,7 +45,7 @@ Hairy textures **grow real fur**.
 
 Animations are rendered frame by frame at exact moments of the loop, so they never drop frames.
 
-Exported files carry a discreet "Made with Harfouz" note in their metadata (it never changes the picture, and your work stays yours). A small visible mark can be added as an option.
+Exported files carry a discreet "Made with Harfooz" note in their metadata (it never changes the picture, and your work stays yours). A small visible mark can be added as an option.
 
 ---
 
@@ -54,8 +54,8 @@ Exported files carry a discreet "Made with Harfouz" note in their metadata (it n
 You need [Node.js](https://nodejs.org) **20.19 or later** (22 LTS recommended).
 
 ```bash
-git clone https://github.com/Harfouz/harfouz.git
-cd harfouz
+git clone https://github.com/Harfooz/harfooz.git
+cd harfooz
 npm install
 npm run dev
 ```
@@ -73,7 +73,7 @@ The built site is fully static: `dist/` can be hosted anywhere (GitHub Pages, Ne
 
 ### Browser support
 
-Harfouz works in recent versions of Chrome, Edge, Firefox and Safari. MP4 and WebM export use the browser's own video encoder (WebCodecs). Where a format isn't supported, the export menu says so. The PNG sequence works everywhere.
+Harfooz works in recent versions of Chrome, Edge, Firefox and Safari. MP4 and WebM export use the browser's own video encoder (WebCodecs). Where a format isn't supported, the export menu says so. The PNG sequence works everywhere.
 
 ---
 
@@ -124,4 +124,4 @@ Contributions are welcome: code, typefaces, materials, motion presets, translati
 - **Typefaces**: [SIL Open Font License 1.1](https://openfontlicense.org), each in its own folder under `public/fonts/` with its licence file.
 - **Libraries**: see [CREDITS.md](CREDITS.md).
 
-Harfouz (حرفوز) plays on *ḥarf* (حرف), "letter".
+Harfooz (حرفوز) plays on *ḥarf* (حرف), "letter".

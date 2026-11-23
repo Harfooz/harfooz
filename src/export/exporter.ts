@@ -35,7 +35,7 @@ export interface ExportJob {
   fps: number;
   loops: number;
   loopSeconds: number;
-  /** Add a small visible "Made with Harfouz" mark (the invisible credit is always added). */
+  /** Add a small visible "Made with Harfooz" mark (the invisible credit is always added). */
   mark: boolean;
   onProgress: (done: number) => void;
   signal: AbortSignal;

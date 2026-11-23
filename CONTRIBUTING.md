@@ -1,10 +1,10 @@
 # Contributing to Harfooz
 
-Thank you for helping. Harfouz is for designers, animators and developers alike: you don't need to be a programmer to contribute. A bug report, a typeface suggestion or a motion preset idea is as welcome as code.
+Thank you for helping. Harfooz is for designers, animators and developers alike: you don't need to be a programmer to contribute. A bug report, a typeface suggestion or a motion preset idea is as welcome as code.
 
 ## Ways to help
 
-- **Report a problem.** Open an issue with the word you typed, the typeface, the settings, and a screenshot. For shaping problems (a letter in the wrong form, a misplaced diacritic), say whether the same word looks right in another app with the same typeface: it helps tell a Harfouz bug from a font quirk.
+- **Report a problem.** Open an issue with the word you typed, the typeface, the settings, and a screenshot. For shaping problems (a letter in the wrong form, a misplaced diacritic), say whether the same word looks right in another app with the same typeface: it helps tell a Harfooz bug from a font quirk.
 - **Suggest or add a typeface** (see below).
 - **Add a material, a palette or a motion preset.**
 - **Translate the interface.** It is available in English, French, Arabic and Russian. Fixing a translation or adding a language is very welcome (see *Interface texts and languages* below).

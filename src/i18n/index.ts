@@ -37,7 +37,7 @@ export function getLanguage(): Lang {
   return current;
 }
 
-const STORAGE_KEY = 'harfouz.language';
+const STORAGE_KEY = 'harfooz.language';
 
 /** The language saved from a previous visit, else English. */
 export function savedLanguage(): Lang {

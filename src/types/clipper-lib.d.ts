@@ -1,4 +1,4 @@
-// Minimal types for the parts of clipper-lib (Clipper 6, Angus Johnson) Harfouz uses.
+// Minimal types for the parts of clipper-lib (Clipper 6, Angus Johnson) Harfooz uses.
 declare module 'clipper-lib' {
   type IntPoint = { X: number; Y: number };
   type Path = IntPoint[];

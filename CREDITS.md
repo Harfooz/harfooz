@@ -1,6 +1,6 @@
 # Credits
 
-Harfouz's code is released under the MIT licence. It bundles the typefaces below and builds on open-source libraries.
+Harfooz's code is released under the MIT licence. It bundles the typefaces below and builds on open-source libraries.
 
 ## Typefaces
 

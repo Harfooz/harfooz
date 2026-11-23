@@ -698,12 +698,12 @@ $('export-go').addEventListener('click', async () => {
       signal: exportAbort.signal,
     });
     const stamp = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '');
-    download(blob, `harfouz-${state.fontId}-${stamp}.${format.extension}`);
+    download(blob, `harfooz-${state.fontId}-${stamp}.${format.extension}`);
     const kb = blob.size / 1024;
     const weight = kb > 1024 ? `${(kb / 1024).toFixed(1)} MB` : `${Math.round(kb)} KB`;
     const name = t(`format.${format.id}`, format.label);
     const what = format.id === 'glb' ? `${name}, ${weight}` : `${name}, ${width} × ${height}, ${weight}`;
-    exportStatus.textContent = t('export.done', 'Done: {what}. Sharing it? Tag #harfouz so others can find the tool.', { what });
+    exportStatus.textContent = t('export.done', 'Done: {what}. Sharing it? Tag #harfooz so others can find the tool.', { what });
   } catch (err) {
     exportStatus.textContent =
       (err as Error).name === 'AbortError'

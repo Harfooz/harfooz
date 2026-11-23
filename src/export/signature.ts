@@ -1,5 +1,5 @@
 /**
- * "Made with Harfouz": a credit added to exported files.
+ * "Made with Harfooz": a credit added to exported files.
  *
  * - Invisible: written into each format's own metadata (PNG text chunk, JPEG
  *   and GIF comment, glTF asset info, video comment, ZIP file
@@ -8,8 +8,8 @@
  * - Visible (optional, off by default): a small mark in a corner.
  */
 
-export const SITE_URL = 'https://harfouz.github.io/harfouz/';
-export const SIGNATURE = `Made with Harfouz, parametric Arabic typography: ${SITE_URL}`;
+export const SITE_URL = 'https://harfooz.github.io/harfooz/';
+export const SIGNATURE = `Made with Harfooz, parametric Arabic typography: ${SITE_URL}`;
 
 const utf8 = new TextEncoder();
 const latin1 = (s: string) => Uint8Array.from(s, (c) => c.charCodeAt(0) & 0xff);
@@ -55,7 +55,7 @@ function pngChunk(type: string, data: Uint8Array): Uint8Array {
 export function signPng(png: Uint8Array): Uint8Array {
   const ihdrEnd = 8 + 12 + new DataView(png.buffer, png.byteOffset).getUint32(8);
   const text = (key: string, value: string) => pngChunk('tEXt', concat([latin1(key), new Uint8Array([0]), latin1(value)]));
-  return concat([png.subarray(0, ihdrEnd), text('Software', 'Harfouz'), text('Comment', SIGNATURE), png.subarray(ihdrEnd)]);
+  return concat([png.subarray(0, ihdrEnd), text('Software', 'Harfooz'), text('Comment', SIGNATURE), png.subarray(ihdrEnd)]);
 }
 
 // ── JPEG: a comment segment after the JFIF header ────────
@@ -93,8 +93,8 @@ export function signGlb(glb: ArrayBuffer): ArrayBuffer {
   const json = JSON.parse(new TextDecoder().decode(new Uint8Array(glb, 20, jsonLength)));
   json.asset = {
     ...json.asset,
-    generator: `Harfouz (${json.asset?.generator ?? 'three.js'})`,
-    extras: { ...json.asset?.extras, madeWith: 'Harfouz', url: SITE_URL },
+    generator: `Harfooz (${json.asset?.generator ?? 'three.js'})`,
+    extras: { ...json.asset?.extras, madeWith: 'Harfooz', url: SITE_URL },
   };
   let text = utf8.encode(JSON.stringify(json));
   // Chunks are aligned on 4 bytes; JSON is padded with spaces.
@@ -115,7 +115,7 @@ export function signGlb(glb: ArrayBuffer): ArrayBuffer {
 
 // ── Visible mark on pictures ─────────────────────────────
 
-const MARK_ARABIC = '"Harfouz Amiri", serif';
+const MARK_ARABIC = '"Harfooz Amiri", serif';
 const MARK_MONO = 'ui-monospace, "SF Mono", Menlo, Consolas, monospace';
 
 /** Load the logo's Arabic face so the mark never falls back to another font. */
@@ -148,7 +148,7 @@ function drawSpaced(ctx: CanvasRenderingContext2D, text: string, x: number, y: n
 }
 
 /**
- * Draw a small "MADE WITH حرفوز HARFOUZ" in the bottom corner of a frame,
+ * Draw a small "MADE WITH حرفوز HARFOOZ" in the bottom corner of a frame,
  * as plain text in the logo's faces (Amiri for the Arabic, spaced
  * monospace capitals for the Latin), light or dark to suit the background.
  * Call prepareMark() once before, so the Arabic face is loaded.
@@ -169,10 +169,10 @@ export function drawMark(canvas: HTMLCanvasElement, background: string | null) {
   ctx.fillStyle = light ? 'rgba(26, 22, 18, 0.7)' : 'rgba(236, 231, 247, 0.75)';
   const baseline = canvas.height - margin;
 
-  // Laid out from the right edge: HARFOUZ, then حرفوز, then MADE WITH.
+  // Laid out from the right edge: HARFOOZ, then حرفوز, then MADE WITH.
   ctx.font = `500 ${mono}px ${MARK_MONO}`;
-  const nameX = canvas.width - margin - spacedWidth(ctx, 'HARFOUZ', spacing);
-  drawSpaced(ctx, 'HARFOUZ', nameX, baseline, spacing);
+  const nameX = canvas.width - margin - spacedWidth(ctx, 'HARFOOZ', spacing);
+  drawSpaced(ctx, 'HARFOOZ', nameX, baseline, spacing);
   ctx.font = `${arabic}px ${MARK_ARABIC}`;
   const arX = nameX - gap - ctx.measureText('حرفوز').width;
   ctx.fillText('حرفوز', arX, baseline);

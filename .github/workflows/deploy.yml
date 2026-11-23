@@ -1,4 +1,4 @@
-# Builds Harfouz and publishes it on GitHub Pages every time `main` changes.
+# Builds Harfooz and publishes it on GitHub Pages every time `main` changes.
 # The site ends up at https://<user>.github.io/<repository>/
 name: Deploy to GitHub Pages
 

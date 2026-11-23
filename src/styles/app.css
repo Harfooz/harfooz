@@ -1,13 +1,13 @@
 /* Amiri is the interface's Arabic face. Every bundled font is also registered
    from JavaScript when it loads (see core/fonts.ts). */
 @font-face {
-  font-family: 'Harfouz Amiri';
+  font-family: 'Harfooz Amiri';
   src: url('/fonts/amiri/Amiri-Regular.ttf') format('truetype');
   font-display: swap;
 }
 /* Interface face for the Arabic language (only downloaded when used). */
 @font-face {
-  font-family: 'Harfouz UI Arabic';
+  font-family: 'Harfooz UI Arabic';
   src: url('/fonts/tajawal/Tajawal-Regular.ttf') format('truetype');
   font-display: swap;
 }
@@ -26,7 +26,7 @@
 
   --font-ui: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --font-ar: 'Harfouz Amiri', serif;
+  --font-ar: 'Harfooz Amiri', serif;
 
   --radius: 2px;
   --panel-w: 320px;
@@ -541,7 +541,7 @@ input[type='range']:hover::-webkit-slider-thumb { border-color: var(--accent); }
 
 /* ── Arabic interface (right to left) ──────────────────── */
 html[lang='ar'] {
-  --font-ui: 'Harfouz UI Arabic', ui-sans-serif, system-ui, sans-serif;
+  --font-ui: 'Harfooz UI Arabic', ui-sans-serif, system-ui, sans-serif;
 }
 html[lang='ar'] body { font-size: 15px; }
 /* Letter-spacing and capitals break Arabic joins and mean nothing in Arabic. */
